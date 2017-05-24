@@ -1,7 +1,7 @@
 library CommonUtil {
-
+    
     // 合并两个bytes
-    function combineBytes(bytes _a, bytes _b, bytes1 separator)  returns (bytes _result){
+    function combineBytes(bytes _a, bytes _b, bytes1 separator) constant internal returns (bytes  _result){
         uint _len1 = _a.length;
         uint _len2 = _b.length;
         _result = new bytes(_len1 + _len2 + 1);
@@ -15,7 +15,7 @@ library CommonUtil {
     }
 
     // 合并两个数组
-    function combineBytes32Arr(bytes32[] _arr1,bytes32[] _arr2) internal returns (bytes32[]){
+    function combineBytes32Arr(bytes32[] _arr1,bytes32[] _arr2) constant internal returns (bytes32[]){
         uint len1 = _arr1.length;
         uint len2 = _arr2.length;
         bytes32[] memory result = new bytes32[](len1+len2);
