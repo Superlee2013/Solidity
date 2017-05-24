@@ -1,0 +1,2 @@
+# Solidity
+some methods used frequently in solidity coding
